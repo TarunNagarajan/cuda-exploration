@@ -1,0 +1,1 @@
+I'll just put this here, we'll maintain a dedicated repository for all parallel computing books/research papers.
