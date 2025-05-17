@@ -1,0 +1,12 @@
+| Day | Puzzle Title                                   | Description                                                                                                                            |
+|-----|------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| 31  | Cooperative Groups Barrier                     | Use CUDA Cooperative Groups to synchronize all threads in a grid (requires `–rdc=true`). Implement a global barrier inside a kernel.  |
+| 32  | Dynamic Parallelism                            | From within a device kernel, launch a child kernel that processes a subset of data. Compare performance vs. single kernel launch.     |
+| 33  | Group-Wide Reduction with Cooperative Groups   | Perform a reduction across an entire block or multi-block group using Cooperative Groups APIs (e.g., `cg::reduce`).                   |
+| 34  | Inline PTX Atomic Add                          | Write inline PTX to perform an atomic addition on a 32‑bit integer and invoke it from your CUDA C++ kernel.                           |
+| 35  | Warp-Level Matrix Multiply (WMMA)              | Use NVIDIA’s WMMA API to multiply two 16×16 FP16 tiles within a warp and accumulate into FP32.                                         |
+| 36  | Warp Butterfly Shuffle Network                 | Implement a butterfly reduction among 32 threads in a warp using `__shfl_xor_sync` to compute a sum.                                   |
+| 37  | Occupancy Calculator API                       | Use `cudaOccupancyMaxActiveBlocksPerMultiprocessor` to determine the block size that maximizes occupancy for a given kernel.           |
+| 38  | Producer–Consumer Pipeline with Streams & Events| Build a two-stage pipeline: one kernel produces data into a buffer in stream A, signal via event, then a consumer kernel in stream B.   |
+| 39  | Persistent Thread Block Kernel                 | Write a persistent kernel where each block loops, atomically fetching work items from a global queue until it’s empty.                 |
+| 40  | Async Alloc/Free with Memory Pools             | Use `cudaMallocAsync` and `cudaMemPool` APIs to allocate and free many small buffers efficiently within a timed loop.                  |
