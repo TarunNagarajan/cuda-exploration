@@ -1,0 +1,12 @@
+| Day | Puzzle Title               | Description                                                                                                                         |
+|-----|----------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| 11  | Block-Wide Reduction I     | Implement a sum reduction within each block using shared memory and __syncthreads(). Return one partial sum per block.              |
+| 12  | Block-Wide Reduction II    | Optimize your block reduction with loop unrolling for the final warp (no __syncthreads()).                                          |
+| 13  | Grid-Wide Reduction        | Combine block partial sums on the host to produce the overall array sum; compare against thrust::reduce.                            |
+| 14  | Shared Memory Bank Conflicts | Create a toy kernel that deliberately causes bank conflicts on shared memory, then refactor to avoid them.                        |
+| 15  | Histogram in Shared Memory | Build a small histogram (e.g., 256 bins) of byte values using per-block shared memory, then merge on the host.                     |
+| 16  | Prefix Sum (Scan) I        | Implement an exclusive scan (Blelloch) within each block using shared memory.                                                       |
+| 17  | Prefix Sum (Scan) II       | Generalize your scan to handle arbitrary block sizes and test on random inputs.                                                    |
+| 18  | Warp-Level Primitives      | Use __shfl_up_sync and __shfl_down_sync to perform a warp-only reduction without shared memory.                                     |
+| 19  | Warp Aggregated Scan       | Combine warp intrinsics and shared memory to build a full-block scan that's faster than the pure shared-memory version.            |
+| 20  | Block-to-Block Sync        | Simulate a global barrier: write block results to global memory, then relaunch a kernel to finalize a two-stage reduction.          |
