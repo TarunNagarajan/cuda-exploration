@@ -1,0 +1,12 @@
+| Day | Puzzle Title                                    | Description                                                                                                                                   |
+|-----|-------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| 41  | Nsight Systems End-to-End Trace                | Capture a full application trace (kernel launches, memcpy, CPU work) with Nsight Systems; identify and eliminate bottlenecks.                  |
+| 42  | Nsight Compute Kernel Analysis                  | Profile a slow kernel in Nsight Compute; drill into memory metrics, occupancy, and instruction throughput; optimize based on findings.         |
+| 43  | cuBLAS Batched GEMM                             | Use `cublasSgemmBatched` to multiply many small matrices; compare performance to looped single GEMMs.                                         |
+| 44  | cuSPARSE COO → CSR Conversion                   | On the GPU, convert a sparse matrix from COO to CSR format using cuSPARSE routines; verify correctness and benchmark.                         |
+| 45  | cuFFT 1D & 2D Transforms                        | Perform 1D and 2D FFTs on real-valued data using cuFFT; experiment with planning (`cufftPlan1d`, `cufftPlan2d`) and inplace vs. out-of-place.|
+| 46  | cuRAND Random Number Generation                 | Generate large arrays of floats with cuRAND (`curandGenerateUniform`); measure throughput and integrate into a simple simulation.            |
+| 47  | Tensor Core Profiling                           | Write an FP16 Tensor Core kernel (e.g., WMMA) and compare its performance against a standard FP32 kernel of the same shape.                    |
+| 48  | Multi-GPU Peer-to-Peer Copy                     | On a multi-GPU playground, use `cudaMemcpyPeerAsync` to exchange data between GPUs; measure latency vs. host-mediated copy.                    |
+| 49  | GPU-Accelerated Reduction Tree                  | Implement an N-ary tree reduction across blocks: each stage halves the number of active blocks until one remains.                             |
+| 50  | Custom CUB DeviceRadixSort                      | Use the CUB library to sort large key arrays on-device; compare to a naive bitonic sort kernel you write yourself.                           |
