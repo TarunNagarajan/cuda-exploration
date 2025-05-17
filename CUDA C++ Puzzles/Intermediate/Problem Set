@@ -1,0 +1,12 @@
+| Day | Puzzle Title                        | Description                                                                                                                                      |
+|-----|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| 21  | Coalesced Loads vs Strided Access   | Write two kernels: one with coalesced loads and one with a large stride. Measure and compare their throughput.                                   |
+| 22  | Pinned Host Memory                  | Allocate pinned host memory with `cudaHostAlloc`, transfer a large buffer to device, and time it against pageable transfers.                     |
+| 23  | Texture Memory Lookup               | Bind a 2D array to a texture reference, sample it in a kernel, and compare performance to global memory loads.                                   |
+| 24  | L1 vs L2 Cache Behavior             | Run a repeated-access kernel on a large array; use Nsight Compute to inspect L1/L2 hit rates. Optimize to improve caching.                      |
+| 25  | Streaming Multiprocessors Utilization | Launch multiple concurrent kernels with different streams. Use asynchronous copies and overlapping compute+copy to maximize SM utilization.       |
+| 26  | Tiled Matrix Transpose              | Implement a tiled matrix transpose using shared memory to avoid bank conflicts and uncoalesced writes.                                           |
+| 27  | Loop Unrolling & Compiler Flags     | Write a compute-heavy kernel, compile with and without `-use_fast_math` and `-maxrregcount`, and compare performance.                             |
+| 28  | Asynchronous Data Prefetch          | Use `cudaMemcpyAsync` with streams and prefetch data for the next batch while computing on the current one.                                       |
+| 29  | Unified Memory Exploration          | Allocate a large Unified Memory array, access it from host and device kernels, and measure page-fault overhead.                                  |
+| 30  | Instruction-Level Profiling         | Use `cuobjdump --dump-sass` to inspect the SASS of a performance-critical kernel. Identify and discuss register usage and instruction mix.       |
